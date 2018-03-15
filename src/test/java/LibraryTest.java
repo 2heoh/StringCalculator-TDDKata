@@ -45,4 +45,14 @@ class StringCalculatorTest {
         assertEquals(3, sum);
     }
 
+    @Test
+    public void WhenStringContainsOneCommaTwoCommaThree_ThenSumIsSix() {
+
+        StringCalculator calc = new StringCalculator();
+
+        int sum = calc.Sum("1,2,3");
+
+        assertEquals(6, sum);
+    }
+
 }
