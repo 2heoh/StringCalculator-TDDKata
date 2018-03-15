@@ -25,4 +25,14 @@ class StringCalculatorTest {
         assertEquals(1, sum);
     }
 
+    @Test
+    public void WhenStringContainsOneCommaTwo_ThenSumIsThree() {
+
+        StringCalculator calc = new StringCalculator();
+
+        int sum = calc.Sum("1,2");
+
+        assertEquals(3, sum);
+    }
+
 }
