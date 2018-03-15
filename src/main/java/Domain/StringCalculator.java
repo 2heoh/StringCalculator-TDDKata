@@ -4,17 +4,14 @@ public class StringCalculator {
 
     public int Sum(String input) {
 
-        String[] digits = input.split(",");
-
-        if(digits.length > 1) {
-            return Integer.parseInt(digits[0]) + Integer.parseInt(digits[1]);
-        } else {
-
-            if (input == "") {
-                return 0;
+        String[] digits = input.split(",|\n");
+        int sum = 0;
+        for (String digit: digits) {
+            if (digit.length() > 0) {
+                sum += Integer.parseInt(digit);
             }
 
-            return Integer.parseInt(input);
         }
+        return sum;
     }
 }

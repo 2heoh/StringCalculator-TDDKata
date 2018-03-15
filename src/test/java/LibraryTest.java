@@ -35,4 +35,14 @@ class StringCalculatorTest {
         assertEquals(3, sum);
     }
 
+    @Test
+    public void WhenStringContainsOneNewLineTwo_ThenSumIsThree() {
+
+        StringCalculator calc = new StringCalculator();
+
+        int sum = calc.Sum("1\n2");
+
+        assertEquals(3, sum);
+    }
+
 }
