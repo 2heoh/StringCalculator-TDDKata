@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import Domain.StringCalculator;
@@ -54,5 +55,16 @@ class StringCalculatorTest {
 
         assertEquals(6, sum);
     }
+
+    @Test
+    public void WhenStringStartsWithTwoSlashes_ThenNextSymbolTakenAsASeaparator() {
+
+        StringCalculator calc = new StringCalculator();
+
+        int sum = calc.Sum("\\;1;2;3");
+
+        assertEquals(6, sum);
+    }
+
 
 }

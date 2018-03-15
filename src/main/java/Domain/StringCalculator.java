@@ -4,7 +4,15 @@ public class StringCalculator {
 
     public int Sum(String input) {
 
-        String[] digits = input.split(",|\n");
+        String separator = ",|\\n";
+
+        if(input.startsWith("\\")) {
+            separator = "" + input.toCharArray()[1];
+            input = input.substring(2, input.length());
+        }
+
+        String[] digits = input.split(separator);
+
         int sum = 0;
 
         for (String digit: digits) {
