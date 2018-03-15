@@ -15,5 +15,14 @@ class StringCalculatorTest {
         assertEquals(0, sum);
     }
 
+    @Test
+    public void SumOfStringOneDigitReturns1() {
+
+        StringCalculator calc = new StringCalculator();
+
+        int sum = calc.Sum("1");
+
+        assertEquals(1, sum);
+    }
 
 }
